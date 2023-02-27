@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body .bg-img {
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/564x/f0/46/a4/f046a46482974dd51a3be3a58e292063.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+}
+body .header {
+  font-weight: 700;
+  font-size: 32px;
+  border: 5px solid #078c4e;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  padding: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/opacity/see-through */
+  color: #d9d9d9;
+  z-index: 2;
+  letter-spacing: 2px;
+}
+body .header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: #078c4e;
+  gap: 15px;
+}
+body .header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  gap: 50px;
+  margin-top: 30px;
+}
+body .header nav button {
+  border: none;
+  background-color: #078c4e;
+  color: #d9d9d9;
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+  padding: 18px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+body .header nav button:hover {
+  background-color: #0a734c;
+  transition: 0.3s;
+}/*# sourceMappingURL=main.css.map */

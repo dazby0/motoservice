@@ -1,0 +1,43 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+* {
+  @include defaultAllProperties();
+}
+
+body {
+  .bg-img {
+    @include defaultBodyProperties;
+    background-image: url("https://i.pinimg.com/564x/f0/46/a4/f046a46482974dd51a3be3a58e292063.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+  }
+
+  .header {
+    @include frontFrameStyle($width: 75%);
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/opacity/see-through */
+    color: $lightGray;
+    z-index: 2;
+    letter-spacing: 2px;
+
+    h1 {
+      @include defaultFlex;
+      color: $primaryGreen;
+      gap: 15px;
+    }
+
+    nav {
+      @include defaultFlex;
+      width: 100%;
+      gap: 50px;
+      margin-top: 30px;
+
+      button {
+        @include button($fontSize: 28px, $padding: 18px);
+      }
+    }
+  }
+}

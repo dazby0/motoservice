@@ -1,0 +1,68 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+* {
+  @include defaultAllProperties();
+}
+
+body {
+  @include defaultBgSet;
+
+  .banner {
+    height: 170px;
+    background-image: url("https://images.unsplash.com/photo-1613206485381-b028e578e791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRvb2xzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(8px);
+  }
+
+  header {
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 371px);
+    font-size: 72px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .services {
+    margin-top: 22px;
+    @include defaultFlex;
+
+    .service {
+      width: 250px;
+      height: fit-content;
+      max-height: 500px;
+      padding: 20px;
+      @include defaultFlex(
+        $flex-direction: column,
+        $justify-content: flex-start
+      );
+      border: 2px solid $lightGray;
+      border-radius: 8px;
+
+      &:hover {
+        border: 2px solid $primaryGreen;
+        transition: 0.4s;
+      }
+    }
+
+    h4 {
+      margin: 12px 0;
+      color: $primaryGreen;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    h5 {
+      margin-top: 12px;
+      color: $primaryGreen;
+      font-size: 18px;
+    }
+  }
+}

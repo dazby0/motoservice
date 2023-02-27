@@ -1,0 +1,55 @@
+@mixin defaultAllProperties {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $ubuntu;
+}
+
+@mixin defaultBodyProperties {
+  height: 100vh;
+}
+
+@mixin defaultBgSet {
+  background-color: $black;
+  color: $lightGray;
+}
+
+@mixin frontFrameStyle($width) {
+  font-weight: 700;
+  font-size: 32px;
+  border: 5px solid $primaryGreen;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $width;
+  padding: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin defaultFlex($flex-direction: row, $justify-content: center) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+}
+
+@mixin button($fontSize, $padding, $fontWeight: normal) {
+  border: none;
+  background-color: $primaryGreen;
+  color: $lightGray;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  text-align: center;
+  padding: $padding;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondaryGreen;
+    transition: 0.3s;
+  }
+}

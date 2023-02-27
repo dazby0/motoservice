@@ -1,0 +1,62 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+* {
+  @include defaultAllProperties;
+}
+
+body {
+  @include defaultBodyProperties;
+  @include defaultBgSet;
+
+  .form-container {
+    @include frontFrameStyle($width: 40%);
+
+    form {
+      @include defaultFlex($flex-direction: column);
+      margin-top: 40px;
+      font-size: 22px;
+
+      label {
+        margin-top: 12px;
+      }
+
+      input {
+        color: $lightGray;
+        background: transparent;
+        width: 60%;
+        border: none;
+        border-bottom: 1px solid $lightGray;
+        margin: 12px 0;
+        font-size: 24px;
+        outline: none;
+
+        &:focus {
+          border-bottom: 1px solid $primaryGreen;
+          transition: 0.5s;
+        }
+      }
+
+      .password-input {
+        width: 60%;
+
+        .passwordInput {
+          width: 100%;
+        }
+
+        .show-icon {
+          position: relative;
+          top: -45px;
+          left: 45%;
+          cursor: pointer;
+        }
+      }
+
+      button {
+        margin-top: 24px;
+        @include button($fontSize: 18px, $padding: 14px, $fontWeight: 600);
+      }
+    }
+  }
+}
