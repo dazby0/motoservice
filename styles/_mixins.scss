@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: $ubuntu;
+  text-decoration: none;
 }
 
 @mixin defaultBodyProperties {
@@ -50,6 +51,25 @@
 
   &:hover {
     background-color: $secondaryGreen;
+    transition: 0.3s;
+  }
+}
+
+@mixin buttonBlank($fontSize, $padding, $fontWeight: normal) {
+  border: 2px solid $primaryGreen;
+  background-color: transparent;
+  color: $primaryGreen;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  text-align: center;
+  padding: $padding;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primaryGreen;
+    color: $lightGray;
     transition: 0.3s;
   }
 }

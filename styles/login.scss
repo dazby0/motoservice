@@ -45,7 +45,8 @@ body {
           width: 100%;
         }
 
-        .show-icon {
+        .show-icon,
+        .show-icon-nd {
           position: relative;
           top: -45px;
           left: 45%;
@@ -53,9 +54,39 @@ body {
         }
       }
 
-      button {
-        margin-top: 24px;
-        @include button($fontSize: 18px, $padding: 14px, $fontWeight: 600);
+      .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+
+        .login {
+          margin-top: 24px;
+          padding: 0 20px;
+          color: $lightGray;
+
+          @include button($fontSize: 18px, $padding: 14px, $fontWeight: 600);
+        }
+
+        .register {
+          margin-top: 24px;
+          padding: 0 20px;
+          color: $primaryGreen;
+
+          @include buttonBlank(
+            $fontSize: 18px,
+            $padding: 14px,
+            $fontWeight: 600
+          );
+
+          a {
+            color: $primaryGreen;
+
+            &:hover {
+              color: $lightGray;
+            }
+          }
+        }
       }
     }
   }

@@ -6,5 +6,5 @@
 
     $conn = new mysqli($host, $user, $password, $db);
 
-    if($conn) echo 'dziala';
-    else echo 'nie dziala';  
+    // if($conn) echo 'dziala';
+    // else echo 'nie dziala';  

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zarejestruj się!</title>
+
+    <script
+      src="https://kit.fontawesome.com/0a74181890.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Zarejestruj się</h2>
+      <form action="../backend/register.php" method="post">
+        <label for="loginInput">Login:</label>
+        <input type="text" name="login" id="loginInput" />
+        <label for="passwordInput">Hasło:</label>
+        <div class="password-input">
+          <input
+            type="password"
+            name="password1"
+            id="passwordInput"
+            class="passwordInput"
+          />
+          <i class="fa-solid fa-eye show-icon"></i>
+        </div>
+        <label for="repeatedInput">Powtórz hasło:</label>
+        <div class="password-input">
+          <input
+            type="password"
+            name="password2"
+            id="repeatedInput"
+            class="passwordInput"
+          />
+          <i class="fa-solid fa-eye show-icon-nd"></i>
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="login">Zarejestruj się</button>
+          <button type="button" class="register">
+            <a href="login.html">Zaloguj się</a>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="../scripts/showPassword.js" defer></script>
+  </body>
+</html>

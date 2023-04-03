@@ -1,12 +1,24 @@
-const eyeButton = document.querySelector(".show-icon");
+const eyeButtonSt = document.querySelector(".show-icon");
+const eyeButtonNd = document.querySelector(".show-icon-nd");
 const passwordInput = document.getElementById("passwordInput");
+const repeatedPassword = document.getElementById("repeatedInput");
 
-eyeButton.addEventListener("click", () => {
+eyeButtonSt.addEventListener("click", () => {
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
-    eyeButton.style.color = "#078c4e";
+    eyeButtonSt.style.color = "#078c4e";
   } else {
     passwordInput.type = "password";
-    eyeButton.style.color = "#d9d9d9";
+    eyeButtonSt.style.color = "#d9d9d9";
+  }
+});
+
+eyeButtonNd.addEventListener("click", () => {
+  if (repeatedPassword.type === "password") {
+    repeatedPassword.type = "text";
+    eyeButtonNd.style.color = "#078c4e";
+  } else {
+    repeatedPassword.type = "password";
+    eyeButtonNd.style.color = "#d9d9d9";
   }
 });

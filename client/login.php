@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    if ($_SESSION['logged']) header('Location: ../client/services.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -30,7 +35,12 @@
           <i class="fa-solid fa-eye show-icon"></i>
         </div>
 
-        <button type="submit">Zaloguj się</button>
+        <div class="buttons">
+          <button type="submit" class="login">Zaloguj się</button>
+          <button class="register">
+            <a href="register.html">Zarejestruj się</a>
+          </button>
+        </div>
       </form>
     </div>
 

@@ -14,8 +14,8 @@
       // echo password_hash('admin', PASSWORD_BCRYPT);
 
       if(password_verify($password, $row['password'])) {
-        $_SESSION['logged'] = true;
-        header('Location: ./logged.php');
+        $_SESSION['logged'] = $login;
+        header('Location: ../client/services.php');
       }
       else {
         header('Location: ../client/login.html');

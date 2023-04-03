@@ -1,3 +1,8 @@
+<?php
+  require('../backend/config.php');
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +16,12 @@
 
   <body>
     <div class="banner"></div>
-    <header>Usługi MOTO-KRZYŚ</header>
+      <header>Usługi MOTO-KRZYŚ</header>
+    </div>
+
+    <div class="info">
+      <?php if($_SESSION['logged']) echo "Zalogowano jako: " . $_SESSION['logged'] ?>
+    </div>
 
     <div class="services">
       <div class="service">
@@ -29,6 +39,5 @@
         </p>
         <h5>100zł</h5>
       </div>
-    </div>
   </body>
 </html>
