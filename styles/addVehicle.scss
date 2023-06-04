@@ -1,0 +1,63 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+* {
+  @include defaultAllProperties;
+}
+
+body {
+  @include defaultBodyProperties;
+  @include defaultBgSet;
+
+  h1 {
+    @include defaultFlex;
+    padding: 32px;
+    font-size: 48px;
+    color: $primaryGreen;
+    text-transform: uppercase;
+  }
+
+  form {
+    @include defaultFlex($flex-direction: column);
+
+    input,
+    label {
+      padding: 3px;
+      margin: 12px;
+    }
+
+    label {
+      font-size: 28px;
+      text-transform: uppercase;
+    }
+
+    input {
+      color: $lightGray;
+      background: transparent;
+      width: 40%;
+      border: none;
+      border-bottom: 1px solid $lightGray;
+      margin: 12px 0;
+      font-size: 24px;
+      outline: none;
+
+      &:focus {
+        border-bottom: 1px solid $primaryGreen;
+        transition: 0.5s;
+      }
+    }
+
+    button {
+      @include button($fontSize: 28px, $padding: 14px, $fontWeight: 600);
+      margin-top: 38px;
+    }
+
+    select {
+      background-color: transparent;
+      font-size: 22px;
+      border: none;
+      color: $lightGray;
+    }
+  }
+}

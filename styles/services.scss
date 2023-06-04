@@ -27,6 +27,20 @@ body {
     letter-spacing: 2px;
   }
 
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 12px;
+    background-color: $secondaryGreen;
+    filter: blur(0.2px);
+    font-size: 22px;
+    a {
+      color: $lightGray;
+      text-decoration: none;
+    }
+  }
+
   .services {
     margin-top: 22px;
     @include defaultFlex;
@@ -63,6 +77,20 @@ body {
       margin-top: 12px;
       color: $primaryGreen;
       font-size: 18px;
+    }
+  }
+
+  footer {
+    @include footer;
+
+    a {
+      background-color: $lightGray;
+      color: $black;
+      border: none;
+      padding: 2px;
+      border-radius: 2px;
+      margin-left: 8px;
+      cursor: pointer;
     }
   }
 }

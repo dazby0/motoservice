@@ -27,6 +27,19 @@ body header {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+body nav {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 12px;
+  background-color: #0a734c;
+  filter: blur(0.2px);
+  font-size: 22px;
+}
+body nav a {
+  color: #d9d9d9;
+  text-decoration: none;
+}
 body .services {
   margin-top: 22px;
   display: flex;
@@ -63,4 +76,27 @@ body .services h5 {
   margin-top: 12px;
   color: #078c4e;
   font-size: 18px;
+}
+body footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  background-color: #0a734c;
+  color: #d9d9d9;
+  font-size: 14px;
+  width: 100vw;
+  padding: 6px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+body footer a {
+  background-color: #d9d9d9;
+  color: #0d0d0d;
+  border: none;
+  padding: 2px;
+  border-radius: 2px;
+  margin-left: 8px;
+  cursor: pointer;
 }/*# sourceMappingURL=services.css.map */

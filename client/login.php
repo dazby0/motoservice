@@ -1,6 +1,11 @@
 <?php
     session_start();
-    if ($_SESSION['logged']) header('Location: ../client/services.php');
+    if(isset($_SESSION['logged'])) {
+      header('Location: ../client/services.php');
+    }
+    else {
+      echo "";
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +48,8 @@
         </div>
       </form>
     </div>
+
+    <a href="../admin/pages/login.php">ADMIN PANEL</a>
 
     <script src="../scripts/showPassword.js" defer></script>
   </body>

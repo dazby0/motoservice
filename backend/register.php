@@ -21,6 +21,6 @@
     if ($passed === true) {
         $insertUserSql = "INSERT INTO users(login, password) VALUES('$login', '$passwordHashed')";
         $insertUser = $conn -> query($insertUserSql);
-        header('Location: ../client/login.html');
+        header('Location: ../client/login.php');
     }
     else echo 'wyjebalo cos';

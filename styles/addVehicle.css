@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  background-color: #0d0d0d;
+  color: #d9d9d9;
+}
+body h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 32px;
+  font-size: 48px;
+  color: #078c4e;
+  text-transform: uppercase;
+}
+body form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body form input,
+body form label {
+  padding: 3px;
+  margin: 12px;
+}
+body form label {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+body form input {
+  color: #d9d9d9;
+  background: transparent;
+  width: 40%;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 12px 0;
+  font-size: 24px;
+  outline: none;
+}
+body form input:focus {
+  border-bottom: 1px solid #078c4e;
+  transition: 0.5s;
+}
+body form button {
+  border: none;
+  background-color: #078c4e;
+  color: #d9d9d9;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 38px;
+}
+body form button:hover {
+  background-color: #0a734c;
+  transition: 0.3s;
+}
+body form select {
+  background-color: transparent;
+  font-size: 22px;
+  border: none;
+  color: #d9d9d9;
+}/*# sourceMappingURL=addVehicle.css.map */

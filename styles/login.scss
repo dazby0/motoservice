@@ -10,6 +10,11 @@ body {
   @include defaultBodyProperties;
   @include defaultBgSet;
 
+  a {
+    color: $primaryGreen;
+    border-bottom: 1px solid $primaryGreen;
+  }
+
   .form-container {
     @include frontFrameStyle($width: 40%);
 

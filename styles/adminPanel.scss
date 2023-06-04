@@ -1,0 +1,20 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+* {
+  @include defaultAllProperties;
+}
+
+body {
+  @include defaultBodyProperties;
+  @include defaultBgSet;
+
+  .invisble {
+    display: none;
+  }
+
+  .change {
+    @include button(12px, 6px);
+  }
+}

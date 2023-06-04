@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Vehicle</title>
+
+    <link rel="stylesheet" href="../styles/addVehicle.css" />
+  </head>
+  <body>
+    <h1>Dodaj pojazd:</h1>
+    <form action="../backend/addVehicle.php" method="post">
+      <label for="model">Model: </label>
+      <input type="text" name="model" id="model" required />
+      <label for="prod_year">Rok produkcji: </label>
+      <input type="number" name="prod_year" id="prod_year" required />
+      <label for="img_src">Adres do zdjęcia: </label>
+      <input type="text" name="img_src" id="img_src" required />
+
+      <label for="cars">Status:</label>
+      <select name="status" id="status">
+        <option value="Uszkodzony">Uszkodzony</option>
+        <option value="Nieuszkodzony">Nieuszkodzony</option>
+      </select>
+      <button type="submit">DODAJ</button>
+    </form>
+  </body>
+</html>
